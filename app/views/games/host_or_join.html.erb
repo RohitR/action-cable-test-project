@@ -1,0 +1,16 @@
+
+<%= form_tag host_games_path do %>
+  <%= 
+text_field_tag :email %>
+  <%= 
+submit_tag "host"%>
+<% end %>
+
+<%= form_tag join_games_path do %>
+  <%= 
+text_field_tag :email %>
+<%= select_tag "game_id", options_for_select(@games)
+%>
+  <%= 
+submit_tag "join"%>
+<% end %>

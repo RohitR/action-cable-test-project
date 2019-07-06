@@ -1,0 +1,10 @@
+</script>
+<%= form_for move, remote: true, authenticity_token: true do |f| %>
+  <%= f.label :column %>:
+  <%= f.text_field :column, class: "form-control", data: {text_field: "column"} %>
+
+  <%= f.hidden_field :game_id, value: game.id %>
+  <%= f.hidden_field :player_id, value: @current_player.id %>
+
+  <%= f.submit "send", class: "btn btn-primary", style: "display: none", data: {send: "column"} %>
+<% end %>
