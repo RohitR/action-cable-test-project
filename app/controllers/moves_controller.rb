@@ -10,7 +10,7 @@ class MovesController < ApplicationController
         column: move.column,
         email: current_player.email
       head :ok
-      if move.player_won?
+      if move.won?
         ActionCable.server.broadcast 'messages',
         message: "#{current_player.email} won!!! Game over"
       head :ok

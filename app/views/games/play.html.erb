@@ -1,7 +1,8 @@
 <div class="row col-md-8 col-md-offset-2">
-  <h1><%= @game.id %></h1>
+  <h4>Game B/W<%= @game.player1.email %>Vs <%= @game.player2.try(:email)%></h4>
+  <h2>You are <%=@current_player.email%></h2>
 
-<div id= "message"></div>
+<h1 id= "message"></h1>
 <div class="panel panel-default">
   <% if @moves.any? %>
     <% @moves.each do |move| %>

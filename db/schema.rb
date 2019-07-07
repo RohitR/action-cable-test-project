@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_07_06_081840) do
   create_table "moves", force: :cascade do |t|
     t.bigint "player_id"
     t.bigint "game_id"
-    t.string "column"
+    t.integer "column"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_moves_on_game_id"
