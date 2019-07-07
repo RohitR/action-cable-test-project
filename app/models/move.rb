@@ -4,7 +4,6 @@ class Move < ApplicationRecord
   belongs_to :game
 
   def won?
-    binding.pry
     check_row_wise || check_column_wise || check_diagonal_wise
   end
 
